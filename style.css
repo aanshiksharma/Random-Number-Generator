@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Nunito:wght@300&family=Work+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary-color: rgb(210, 1, 1);
+    --error-color: rgb(255, 0, 0);
+    --font-1: 'Josefin Sans', sans-serif;
+    --font-2: 'Nunito', sans-serif;
+    --font-3: 'Work Sans', sans-serif;
+}
+
+body{
+    background: #1d1c1c;
+    color: white;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.container{
+    /* height: calc(100vh - ); */
+    min-height: 100vh;
+    padding: 20px;
+    font-family: var(--font-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1{
+    color: var(--primary-color);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1vw;
+    position: relative;
+}
+
+.inputs{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input input{
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--primary-color);
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.3rem;
+    font-style: sans-serif;
+    background: transparent;
+    color: white;
+}
+
+.input input::placeholder{
+    color: transparent;
+    font-size: 1.3rem;
+}
+
+.input {
+    position: relative;
+    min-height: 5rem;
+}
+
+.input label{
+    position: absolute;
+    display: block;
+    top: -10px;
+    font-size: 1.1rem;
+    transition: 0.2s ease-out;
+    color: var(--primary-color);
+    font-family: var(--font-2);
+}
+
+.input input:placeholder-shown ~ label{
+    top: 10px;
+    font-size: 1.3rem;
+    cursor: text;
+    color: white;
+}
+
+#maxError,
+#noOfNumbersError{
+    color: var(--error-color);
+    font-family: var(--font-2);
+    margin-top: 4px;
+}
+
+
+.buttons{
+    width: fit-content;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.buttons button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    outline: 0;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.buttons button:hover{
+    color: white;
+    background: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 6px 4px rgba(228, 0, 0, 0.2);
+}
+
+
+.repetition{
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.repetition input{
+    cursor: pointer;
+}
+
+.repetition label{
+    font-family: var(--font-3);
+    color: white;
+    cursor: pointer;
+}
+
+.output{
+    border-radius: 6px;
+    border: 0;
+    outline: 2px solid var(--primary-color);
+    color: white;
+    padding: 10px;
+    min-height: 280px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

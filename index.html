@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1>RANDOM NUMBER GENERATOR</h1>
+            <div class="inputs">
+                <div class="input">
+                    <input type="text" name="min" id="min" placeholder="Minimum Limit">
+                    <label for="min">Minimum Limit</label>
+                </div>
+
+                <div class="input">
+                    <input type="text" name="max" id="max" placeholder="Maximum Limit">
+                    <label for="max">Maximum Limit</label>
+                    <p id="maxError"></p>
+                </div>
+
+                <div class="input">
+                    <input type="text" name="number-of-numbers" id="numberOfNumbers" placeholder="No. of Numbers">
+                    <label for="numberOfNumbers">No. of Numbers</label>
+                    <p id="noOfNumbersError"></p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" onclick="generate()">Generate</button>
+                <button type="button" onclick="reset()">Reset</button>
+            </div>
+
+            <div class="repetition">
+                <input type="checkbox" name="repetition" id="noRepetition">
+                <label for="noRepetition">Do not Allow Repeated Digits</label>
+            </div>
+
+            <div class="output" id="output"></div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
